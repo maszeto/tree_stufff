@@ -1,0 +1,67 @@
+TranslationUnitDecl 0x7fd12401ae08 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd12401b6a0 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd12401b3a0 '__int128'
+|-TypedefDecl 0x7fd12401b710 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd12401b3c0 'unsigned __int128'
+|-TypedefDecl 0x7fd12401b9f8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd12401b7f0 'struct __NSConstantString_tag'
+|   `-Record 0x7fd12401b768 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd12401ba90 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd12401ba50 'char *'
+|   `-BuiltinType 0x7fd12401aea0 'char'
+|-TypedefDecl 0x7fd12401bd68 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd12401bd10 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd12401bb70 'struct __va_list_tag'
+|     `-Record 0x7fd12401bae8 '__va_list_tag'
+|-TypedefDecl 0x7fd124834800 <./tree_src/unarySectVector_AllSectVec.c:4:1, col:23> col:23 referenced BOOL 'unsigned char'
+| `-BuiltinType 0x7fd12401af60 'unsigned char'
+`-FunctionDecl 0x7fd124834de8 <line:11:1, line:21:1> line:11:6 AllSectVec 'void (int, BOOL *, BOOL *, int, int, int)'
+  |-ParmVarDecl 0x7fd124834870 <line:12:5, col:9> col:9 used n 'int'
+  |-ParmVarDecl 0x7fd124834a80 <col:12, col:20> col:17 used x 'BOOL *':'BOOL *'
+  |-ParmVarDecl 0x7fd124834af8 <col:23, col:29> col:29 used z 'BOOL *'
+  |-ParmVarDecl 0x7fd124834b78 <line:13:5, col:9> col:9 used startx 'int'
+  |-ParmVarDecl 0x7fd124834bf8 <col:17, col:21> col:21 used stopx 'int'
+  |-ParmVarDecl 0x7fd124834c78 <col:28, col:32> col:32 used stepx 'int'
+  `-CompoundStmt 0x7fd124835470 <col:40, line:21:1>
+    |-DeclStmt 0x7fd124834f80 <line:15:5, col:10>
+    | `-VarDecl 0x7fd124834f18 <col:5, col:9> col:9 used i 'int'
+    |-DeclStmt 0x7fd124835048 <line:16:5, col:18>
+    | `-VarDecl 0x7fd124834fa8 <col:5, line:5:14> line:16:10 used t 'BOOL':'unsigned char' cinit
+    |   `-ImplicitCastExpr 0x7fd124835030 <line:5:14> 'BOOL':'unsigned char' <IntegralCast>
+    |     `-IntegerLiteral 0x7fd124835010 <col:14> 'int' 1
+    |-ForStmt 0x7fd124835390 <line:17:5, line:19:5>
+    | |-BinaryOperator 0x7fd1248350b8 <line:17:10, col:13> 'int' '='
+    | | |-DeclRefExpr 0x7fd124835060 <col:10> 'int' lvalue Var 0x7fd124834f18 'i' 'int'
+    | | `-ImplicitCastExpr 0x7fd1248350a0 <col:13> 'int' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7fd124835080 <col:13> 'int' lvalue ParmVar 0x7fd124834b78 'startx' 'int'
+    | |-<<<NULL>>>
+    | |-BinaryOperator 0x7fd124835148 <col:21, col:23> 'int' '<'
+    | | |-ImplicitCastExpr 0x7fd124835118 <col:21> 'int' <LValueToRValue>
+    | | | `-DeclRefExpr 0x7fd1248350d8 <col:21> 'int' lvalue Var 0x7fd124834f18 'i' 'int'
+    | | `-ImplicitCastExpr 0x7fd124835130 <col:23> 'int' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7fd1248350f8 <col:23> 'int' lvalue ParmVar 0x7fd124834bf8 'stopx' 'int'
+    | |-CompoundAssignOperator 0x7fd1248351c0 <col:30, col:34> 'int' '+=' ComputeLHSTy='int' ComputeResultTy='int'
+    | | |-DeclRefExpr 0x7fd124835168 <col:30> 'int' lvalue Var 0x7fd124834f18 'i' 'int'
+    | | `-ImplicitCastExpr 0x7fd1248351a8 <col:34> 'int' <LValueToRValue>
+    | |   `-DeclRefExpr 0x7fd124835188 <col:34> 'int' lvalue ParmVar 0x7fd124834c78 'stepx' 'int'
+    | `-CompoundStmt 0x7fd124835378 <col:42, line:19:5>
+    |   `-BinaryOperator 0x7fd124835358 <line:18:9, col:20> 'BOOL':'unsigned char' '='
+    |     |-DeclRefExpr 0x7fd1248351f0 <col:9> 'BOOL':'unsigned char' lvalue Var 0x7fd124834fa8 't' 'BOOL':'unsigned char'
+    |     `-ImplicitCastExpr 0x7fd124835340 <col:13, col:20> 'BOOL':'unsigned char' <IntegralCast>
+    |       `-BinaryOperator 0x7fd124835320 <col:13, col:20> 'int' '&'
+    |         |-ImplicitCastExpr 0x7fd1248352d8 <col:13> 'int' <IntegralCast>
+    |         | `-ImplicitCastExpr 0x7fd1248352c0 <col:13> 'BOOL':'unsigned char' <LValueToRValue>
+    |         |   `-DeclRefExpr 0x7fd124835210 <col:13> 'BOOL':'unsigned char' lvalue Var 0x7fd124834fa8 't' 'BOOL':'unsigned char'
+    |         `-ImplicitCastExpr 0x7fd124835308 <col:17, col:20> 'int' <IntegralCast>
+    |           `-ImplicitCastExpr 0x7fd1248352f0 <col:17, col:20> 'BOOL':'unsigned char' <LValueToRValue>
+    |             `-ArraySubscriptExpr 0x7fd1248352a0 <col:17, col:20> 'BOOL':'unsigned char' lvalue
+    |               |-ImplicitCastExpr 0x7fd124835270 <col:17> 'BOOL *':'BOOL *' <LValueToRValue>
+    |               | `-DeclRefExpr 0x7fd124835230 <col:17> 'BOOL *':'BOOL *' lvalue ParmVar 0x7fd124834a80 'x' 'BOOL *':'BOOL *'
+    |               `-ImplicitCastExpr 0x7fd124835288 <col:19> 'int' <LValueToRValue>
+    |                 `-DeclRefExpr 0x7fd124835250 <col:19> 'int' lvalue Var 0x7fd124834f18 'i' 'int'
+    `-BinaryOperator 0x7fd124835450 <line:20:5, col:10> 'BOOL':'unsigned char' '='
+      |-UnaryOperator 0x7fd124835400 <col:5, col:6> 'BOOL':'unsigned char' lvalue prefix '*' cannot overflow
+      | `-ImplicitCastExpr 0x7fd1248353e8 <col:6> 'BOOL *' <LValueToRValue>
+      |   `-DeclRefExpr 0x7fd1248353c8 <col:6> 'BOOL *' lvalue ParmVar 0x7fd124834af8 'z' 'BOOL *'
+      `-ImplicitCastExpr 0x7fd124835438 <col:10> 'BOOL':'unsigned char' <LValueToRValue>
+        `-DeclRefExpr 0x7fd124835418 <col:10> 'BOOL':'unsigned char' lvalue Var 0x7fd124834fa8 't' 'BOOL':'unsigned char'

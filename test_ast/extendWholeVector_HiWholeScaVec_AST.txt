@@ -1,0 +1,57 @@
+TranslationUnitDecl 0x7fa02e838c08 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fa02e8394a0 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fa02e8391a0 '__int128'
+|-TypedefDecl 0x7fa02e839510 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fa02e8391c0 'unsigned __int128'
+|-TypedefDecl 0x7fa02e8397f8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fa02e8395f0 'struct __NSConstantString_tag'
+|   `-Record 0x7fa02e839568 '__NSConstantString_tag'
+|-TypedefDecl 0x7fa02e839890 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fa02e839850 'char *'
+|   `-BuiltinType 0x7fa02e838ca0 'char'
+|-TypedefDecl 0x7fa02e839b68 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fa02e839b10 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fa02e839970 'struct __va_list_tag'
+|     `-Record 0x7fa02e8398e8 '__va_list_tag'
+|-TypedefDecl 0x7fa02f02f200 <./tree_src/extendWholeVector_HiWholeScaVec.c:3:1, col:23> col:23 BOOL 'unsigned char'
+| `-BuiltinType 0x7fa02e838d60 'unsigned char'
+|-FunctionDecl 0x7fa02f02f708 <line:6:1, line:13:1> line:6:6 HiWholeScaVec 'void (int, double, double *, double *)'
+| |-ParmVarDecl 0x7fa02f02f270 <line:7:5, col:9> col:9 used n 'int'
+| |-ParmVarDecl 0x7fa02f02f2f0 <col:12, col:19> col:19 used x 'double'
+| |-ParmVarDecl 0x7fa02f02f470 <col:22, col:32> col:29 used y 'double *':'double *'
+| |-ParmVarDecl 0x7fa02f02f5c0 <col:35, col:45> col:42 used z 'double *':'double *'
+| `-CompoundStmt 0x7fa02f02fe00 <col:49, line:13:1>
+|   |-DeclStmt 0x7fa02f02f890 <line:9:5, col:10>
+|   | `-VarDecl 0x7fa02f02f828 <col:5, col:9> col:9 used i 'int'
+|   `-ForStmt 0x7fa02f02fdc8 <line:10:5, line:12:5>
+|     |-BinaryOperator 0x7fa02f02f8e8 <line:10:10, col:14> 'int' '='
+|     | |-DeclRefExpr 0x7fa02f02f8a8 <col:10> 'int' lvalue Var 0x7fa02f02f828 'i' 'int'
+|     | `-IntegerLiteral 0x7fa02f02f8c8 <col:14> 'int' 0
+|     |-<<<NULL>>>
+|     |-ImplicitCastExpr 0x7fa02f02f928 <col:17> 'int' <LValueToRValue>
+|     | `-DeclRefExpr 0x7fa02f02f908 <col:17> 'int' lvalue ParmVar 0x7fa02f02f270 'n' 'int'
+|     |-UnaryOperator 0x7fa02f02f960 <col:20, col:22> 'int' prefix '++'
+|     | `-DeclRefExpr 0x7fa02f02f940 <col:22> 'int' lvalue Var 0x7fa02f02f828 'i' 'int'
+|     `-CompoundStmt 0x7fa02f02fdb0 <col:26, line:12:5>
+|       `-BinaryOperator 0x7fa02f02fd90 <line:11:9, col:27> 'double' '='
+|         |-ArraySubscriptExpr 0x7fa02f02f9e8 <col:9, col:12> 'double' lvalue
+|         | |-ImplicitCastExpr 0x7fa02f02f9b8 <col:9> 'double *':'double *' <LValueToRValue>
+|         | | `-DeclRefExpr 0x7fa02f02f978 <col:9> 'double *':'double *' lvalue ParmVar 0x7fa02f02f5c0 'z' 'double *':'double *'
+|         | `-ImplicitCastExpr 0x7fa02f02f9d0 <col:11> 'int' <LValueToRValue>
+|         |   `-DeclRefExpr 0x7fa02f02f998 <col:11> 'int' lvalue Var 0x7fa02f02f828 'i' 'int'
+|         `-CallExpr 0x7fa02f02fd30 <col:16, col:27> 'double'
+|           |-ImplicitCastExpr 0x7fa02f02fd18 <col:16> 'double (*)(double, double)' <FunctionToPointerDecay>
+|           | `-DeclRefExpr 0x7fa02f02fc18 <col:16> 'double (double, double)' Function 0x7fa02f02fa48 'fmax' 'double (double, double)'
+|           |-ImplicitCastExpr 0x7fa02f02fd60 <col:21> 'double' <LValueToRValue>
+|           | `-DeclRefExpr 0x7fa02f02fc38 <col:21> 'double' lvalue ParmVar 0x7fa02f02f2f0 'x' 'double'
+|           `-ImplicitCastExpr 0x7fa02f02fd78 <col:23, col:26> 'double' <LValueToRValue>
+|             `-ArraySubscriptExpr 0x7fa02f02fcc8 <col:23, col:26> 'double' lvalue
+|               |-ImplicitCastExpr 0x7fa02f02fc98 <col:23> 'double *':'double *' <LValueToRValue>
+|               | `-DeclRefExpr 0x7fa02f02fc58 <col:23> 'double *':'double *' lvalue ParmVar 0x7fa02f02f470 'y' 'double *':'double *'
+|               `-ImplicitCastExpr 0x7fa02f02fcb0 <col:25> 'int' <LValueToRValue>
+|                 `-DeclRefExpr 0x7fa02f02fc78 <col:25> 'int' lvalue Var 0x7fa02f02f828 'i' 'int'
+`-FunctionDecl 0x7fa02f02fa48 <col:16> col:16 implicit used fmax 'double (double, double)' extern
+  |-ParmVarDecl 0x7fa02f02fae8 <<invalid sloc>> <invalid sloc> 'double'
+  |-ParmVarDecl 0x7fa02f02fb50 <<invalid sloc>> <invalid sloc> 'double'
+  |-NoThrowAttr 0x7fa02f02fbc8 <col:16> Implicit
+  `-ConstAttr 0x7fa02f02fc08 <col:16> Implicit

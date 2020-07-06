@@ -1,0 +1,72 @@
+TranslationUnitDecl 0x7fd00081f808 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x7fd0008200a0 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x7fd00081fda0 '__int128'
+|-TypedefDecl 0x7fd000820110 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x7fd00081fdc0 'unsigned __int128'
+|-TypedefDecl 0x7fd0008203f8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString 'struct __NSConstantString_tag'
+| `-RecordType 0x7fd0008201f0 'struct __NSConstantString_tag'
+|   `-Record 0x7fd000820168 '__NSConstantString_tag'
+|-TypedefDecl 0x7fd000820490 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x7fd000820450 'char *'
+|   `-BuiltinType 0x7fd00081f8a0 'char'
+|-TypedefDecl 0x7fd000820768 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'struct __va_list_tag [1]'
+| `-ConstantArrayType 0x7fd000820710 'struct __va_list_tag [1]' 1 
+|   `-RecordType 0x7fd000820570 'struct __va_list_tag'
+|     `-Record 0x7fd0008204e8 '__va_list_tag'
+|-TypedefDecl 0x7fd000878200 <./tree_src/dyadicIndexVector_OrIndexVec.c:3:1, col:23> col:23 referenced BOOL 'unsigned char'
+| `-BuiltinType 0x7fd00081f960 'unsigned char'
+`-FunctionDecl 0x7fd000878d48 <line:6:1, line:14:1> line:6:6 OrIndexVec 'void (int, BOOL *, BOOL *, BOOL *, int *, int *, int *)'
+  |-ParmVarDecl 0x7fd000878270 <line:7:5, col:9> col:9 used n 'int'
+  |-ParmVarDecl 0x7fd000878480 <col:12, col:20> col:17 used z 'BOOL *':'BOOL *'
+  |-ParmVarDecl 0x7fd000878610 <col:23, col:31> col:28 used x 'BOOL *':'BOOL *'
+  |-ParmVarDecl 0x7fd0008787a0 <col:34, col:42> col:39 used y 'BOOL *':'BOOL *'
+  |-ParmVarDecl 0x7fd000878920 <line:8:5, col:13> col:9 used ix 'int *':'int *'
+  |-ParmVarDecl 0x7fd000878a70 <col:16, col:24> col:20 used iy 'int *':'int *'
+  |-ParmVarDecl 0x7fd000878bc0 <col:27, col:35> col:31 used iz 'int *':'int *'
+  `-CompoundStmt 0x7fd00087a3e8 <col:39, line:14:1>
+    |-DeclStmt 0x7fd000878ee8 <line:10:5, col:10>
+    | `-VarDecl 0x7fd000878e80 <col:5, col:9> col:9 used i 'int'
+    `-ForStmt 0x7fd00087a3b0 <line:11:5, line:13:5>
+      |-BinaryOperator 0x7fd000878f40 <line:11:10, col:13> 'int' '='
+      | |-DeclRefExpr 0x7fd000878f00 <col:10> 'int' lvalue Var 0x7fd000878e80 'i' 'int'
+      | `-IntegerLiteral 0x7fd000878f20 <col:13> 'int' 0
+      |-<<<NULL>>>
+      |-ImplicitCastExpr 0x7fd000878f80 <col:16> 'int' <LValueToRValue>
+      | `-DeclRefExpr 0x7fd000878f60 <col:16> 'int' lvalue ParmVar 0x7fd000878270 'n' 'int'
+      |-UnaryOperator 0x7fd000878fb8 <col:19, col:20> 'int' postfix '++'
+      | `-DeclRefExpr 0x7fd000878f98 <col:19> 'int' lvalue Var 0x7fd000878e80 'i' 'int'
+      `-CompoundStmt 0x7fd00087a398 <col:25, line:13:5>
+        `-BinaryOperator 0x7fd00087a378 <line:12:2, col:30> 'BOOL':'unsigned char' '='
+          |-ArraySubscriptExpr 0x7fd0008790b0 <col:2, col:9> 'BOOL':'unsigned char' lvalue
+          | |-ImplicitCastExpr 0x7fd000879080 <col:2> 'BOOL *':'BOOL *' <LValueToRValue>
+          | | `-DeclRefExpr 0x7fd000878fd0 <col:2> 'BOOL *':'BOOL *' lvalue ParmVar 0x7fd000878480 'z' 'BOOL *':'BOOL *'
+          | `-ImplicitCastExpr 0x7fd000879098 <col:4, col:8> 'int' <LValueToRValue>
+          |   `-ArraySubscriptExpr 0x7fd000879060 <col:4, col:8> 'int' lvalue
+          |     |-ImplicitCastExpr 0x7fd000879030 <col:4> 'int *':'int *' <LValueToRValue>
+          |     | `-DeclRefExpr 0x7fd000878ff0 <col:4> 'int *':'int *' lvalue ParmVar 0x7fd000878bc0 'iz' 'int *':'int *'
+          |     `-ImplicitCastExpr 0x7fd000879048 <col:7> 'int' <LValueToRValue>
+          |       `-DeclRefExpr 0x7fd000879010 <col:7> 'int' lvalue Var 0x7fd000878e80 'i' 'int'
+          `-ImplicitCastExpr 0x7fd00087a360 <col:12, col:30> 'BOOL':'unsigned char' <IntegralCast>
+            `-BinaryOperator 0x7fd00087a340 <col:12, col:30> 'int' '|'
+              |-ImplicitCastExpr 0x7fd00087a2f8 <col:12, col:19> 'int' <IntegralCast>
+              | `-ImplicitCastExpr 0x7fd00087a2e0 <col:12, col:19> 'BOOL':'unsigned char' <LValueToRValue>
+              |   `-ArraySubscriptExpr 0x7fd0008791b0 <col:12, col:19> 'BOOL':'unsigned char' lvalue
+              |     |-ImplicitCastExpr 0x7fd000879180 <col:12> 'BOOL *':'BOOL *' <LValueToRValue>
+              |     | `-DeclRefExpr 0x7fd0008790d0 <col:12> 'BOOL *':'BOOL *' lvalue ParmVar 0x7fd000878610 'x' 'BOOL *':'BOOL *'
+              |     `-ImplicitCastExpr 0x7fd000879198 <col:14, col:18> 'int' <LValueToRValue>
+              |       `-ArraySubscriptExpr 0x7fd000879160 <col:14, col:18> 'int' lvalue
+              |         |-ImplicitCastExpr 0x7fd000879130 <col:14> 'int *':'int *' <LValueToRValue>
+              |         | `-DeclRefExpr 0x7fd0008790f0 <col:14> 'int *':'int *' lvalue ParmVar 0x7fd000878920 'ix' 'int *':'int *'
+              |         `-ImplicitCastExpr 0x7fd000879148 <col:17> 'int' <LValueToRValue>
+              |           `-DeclRefExpr 0x7fd000879110 <col:17> 'int' lvalue Var 0x7fd000878e80 'i' 'int'
+              `-ImplicitCastExpr 0x7fd00087a328 <col:23, col:30> 'int' <IntegralCast>
+                `-ImplicitCastExpr 0x7fd00087a310 <col:23, col:30> 'BOOL':'unsigned char' <LValueToRValue>
+                  `-ArraySubscriptExpr 0x7fd00087a2c0 <col:23, col:30> 'BOOL':'unsigned char' lvalue
+                    |-ImplicitCastExpr 0x7fd00087a290 <col:23> 'BOOL *':'BOOL *' <LValueToRValue>
+                    | `-DeclRefExpr 0x7fd0008791d0 <col:23> 'BOOL *':'BOOL *' lvalue ParmVar 0x7fd0008787a0 'y' 'BOOL *':'BOOL *'
+                    `-ImplicitCastExpr 0x7fd00087a2a8 <col:25, col:29> 'int' <LValueToRValue>
+                      `-ArraySubscriptExpr 0x7fd00087a270 <col:25, col:29> 'int' lvalue
+                        |-ImplicitCastExpr 0x7fd00087a240 <col:25> 'int *':'int *' <LValueToRValue>
+                        | `-DeclRefExpr 0x7fd00087a200 <col:25> 'int *':'int *' lvalue ParmVar 0x7fd000878a70 'iy' 'int *':'int *'
+                        `-ImplicitCastExpr 0x7fd00087a258 <col:28> 'int' <LValueToRValue>
+                          `-DeclRefExpr 0x7fd00087a220 <col:28> 'int' lvalue Var 0x7fd000878e80 'i' 'int'
